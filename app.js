@@ -56,7 +56,7 @@ document.addEventListener("DOMContentLoaded", function () {
 });
 
 
-// Sample JSON data for lectures
+// JSON data for lectures
 const lectures = [
     {
         "module_code": "COMP3200",
@@ -66,6 +66,7 @@ const lectures = [
         "onedrive_link": "https://livekentac-my.sharepoint.com/my?referringClient=Sync&id=%2Fpersonal%2Fjd890%5Fkent%5Fac%5Fuk%2FDocuments%2FYear%201%20stuff%2FCOMP3200",
         "moodle_link": "https://moodle.kent.ac.uk/2024/course/view.php?id=876",
         "presto_link": "https://attendance.kent.ac.uk/selfregistration",
+        "maps_link": "https://maps.app.goo.gl/4koBCovC59Q3QP3G6",
         "start_time": "10:00",
         "end_time": "11:00"
     },
@@ -77,6 +78,7 @@ const lectures = [
         "onedrive_link": "https://livekentac-my.sharepoint.com/my?referringClient=Sync&id=%2Fpersonal%2Fjd890%5Fkent%5Fac%5Fuk%2FDocuments%2FYear%201%20stuff%2FCOMP3280%5F5820",
         "moodle_link": "https://moodle.kent.ac.uk/2024/course/view.php?id=263",
         "presto_link": "https://attendance.kent.ac.uk/selfregistration",
+        "maps_link": "https://maps.app.goo.gl/4koBCovC59Q3QP3G6",
         "start_time": "13:00",
         "end_time": "14:00"
     },
@@ -84,10 +86,11 @@ const lectures = [
         "module_code": "COMP3280_COMP5820",
         "module_name": "HCI",
         "day": "Monday",
-        "location": "Multimedia Lab 1",
+        "location": "Cornwallis North West Multimedia Lab 1",
         "onedrive_link": "https://livekentac-my.sharepoint.com/my?referringClient=Sync&id=%2Fpersonal%2Fjd890%5Fkent%5Fac%5Fuk%2FDocuments%2FYear%201%20stuff%2FCOMP3280%5F5820",
         "moodle_link": "https://moodle.kent.ac.uk/2024/course/view.php?id=263",
         "presto_link": "https://attendance.kent.ac.uk/selfregistration",
+        "maps_link": "https://maps.app.goo.gl/iXhXeQNse9HrdmnD7",
         "start_time": "15:00",
         "end_time": "16:00"
     },
@@ -99,6 +102,7 @@ const lectures = [
         "onedrive_link": "https://livekentac-my.sharepoint.com/my?referringClient=Sync&id=%2Fpersonal%2Fjd890%5Fkent%5Fac%5Fuk%2FDocuments%2FYear%201%20stuff%2FCOMP3200",
         "moodle_link": "https://moodle.kent.ac.uk/2024/course/view.php?id=876",
         "presto_link": "https://attendance.kent.ac.uk/selfregistration",
+        "maps_link": "https://maps.app.goo.gl/cF98YiSiW2BDQXxD8",
         "start_time": "16:00",
         "end_time": "17:00"
     },
@@ -110,6 +114,7 @@ const lectures = [
         "onedrive_link": "https://livekentac-my.sharepoint.com/my?referringClient=Sync&id=%2Fpersonal%2Fjd890%5Fkent%5Fac%5Fuk%2FDocuments%2FYear%201%20stuff%2FCOMP3200",
         "moodle_link": "https://moodle.kent.ac.uk/2024/course/view.php?id=876",
         "presto_link": "https://attendance.kent.ac.uk/selfregistration",
+        "maps_link": "https://maps.app.goo.gl/4koBCovC59Q3QP3G6",
         "start_time": "09:00",
         "end_time": "10:00"
     },
@@ -121,6 +126,7 @@ const lectures = [
         "onedrive_link": "https://livekentac-my.sharepoint.com/my?referringClient=Sync&id=%2Fpersonal%2Fjd890%5Fkent%5Fac%5Fuk%2FDocuments%2FYear%201%20stuff%2FCOMP3220",
         "moodle_link": "https://moodle.kent.ac.uk/2024/course/view.php?id=877",
         "presto_link": "https://attendance.kent.ac.uk/selfregistration",
+        "maps_link": "https://maps.app.goo.gl/ajSmUVg291Nw7nMVA",
         "start_time": "16:00",
         "end_time": "18:00"
     },
@@ -132,6 +138,7 @@ const lectures = [
         "onedrive_link": "https://livekentac-my.sharepoint.com/my?referringClient=Sync&id=%2Fpersonal%2Fjd890%5Fkent%5Fac%5Fuk%2FDocuments%2FYear%201%20stuff%2FCOMP3200",
         "moodle_link": "https://moodle.kent.ac.uk/2024/course/view.php?id=876",
         "presto_link": "https://attendance.kent.ac.uk/selfregistration",
+        "maps_link": "https://maps.app.goo.gl/B7fJbDNh9GAj7Gg76",
         "start_time": "09:00",
         "end_time": "11:00"
     },
@@ -143,6 +150,7 @@ const lectures = [
         "onedrive_link": "https://livekentac-my.sharepoint.com/my?referringClient=Sync&id=%2Fpersonal%2Fjd890%5Fkent%5Fac%5Fuk%2FDocuments%2FYear%201%20stuff%2FCOMP3220",
         "moodle_link": "https://moodle.kent.ac.uk/2024/course/view.php?id=877",
         "presto_link": "https://attendance.kent.ac.uk/selfregistration",
+        "maps_link": "https://maps.app.goo.gl/vmHF2oVia11zCTaB6",
         "start_time": "13:00",
         "end_time": "14:00"
     },
@@ -154,6 +162,7 @@ const lectures = [
         "onedrive_link": "https://livekentac-my.sharepoint.com/my?referringClient=Sync&id=%2Fpersonal%2Fjd890%5Fkent%5Fac%5Fuk%2FDocuments%2FYear%201%20stuff%2FCOMP3370%5F5810",
         "moodle_link": "https://moodle.kent.ac.uk/2024/course/view.php?id=264",
         "presto_link": "https://attendance.kent.ac.uk/selfregistration",
+        "maps_link": "https://maps.app.goo.gl/4koBCovC59Q3QP3G6",
         "start_time": "15:00",
         "end_time": "16:00"
     },
@@ -165,6 +174,7 @@ const lectures = [
         "onedrive_link": "https://livekentac-my.sharepoint.com/my?referringClient=Sync&id=%2Fpersonal%2Fjd890%5Fkent%5Fac%5Fuk%2FDocuments%2FYear%201%20stuff%2FCOMP3280%5F5820",
         "moodle_link": "https://moodle.kent.ac.uk/2024/course/view.php?id=263",
         "presto_link": "https://attendance.kent.ac.uk/selfregistration",
+        "maps_link": "https://maps.app.goo.gl/4koBCovC59Q3QP3G6",
         "start_time": "16:00",
         "end_time": "17:00"
     },
@@ -176,6 +186,7 @@ const lectures = [
         "onedrive_link": "https://livekentac-my.sharepoint.com/my?referringClient=Sync&id=%2Fpersonal%2Fjd890%5Fkent%5Fac%5Fuk%2FDocuments%2FYear%201%20stuff%2FCOMP3370%5F5810",
         "moodle_link": "https://moodle.kent.ac.uk/2024/course/view.php?id=264",
         "presto_link": "https://attendance.kent.ac.uk/selfregistration",
+        "maps_link": "https://maps.app.goo.gl/4koBCovC59Q3QP3G6",
         "start_time": "10:00",
         "end_time": "11:00"
     },
@@ -187,6 +198,7 @@ const lectures = [
         "onedrive_link": "https://livekentac-my.sharepoint.com/my?referringClient=Sync&id=%2Fpersonal%2Fjd890%5Fkent%5Fac%5Fuk%2FDocuments%2FYear%201%20stuff%2FCOMP3220",
         "moodle_link": "https://moodle.kent.ac.uk/2024/course/view.php?id=877",
         "presto_link": "https://attendance.kent.ac.uk/selfregistration",
+        "maps_link": "https://maps.app.goo.gl/vxkpATbZRhAcUePE8",
         "start_time": "13:00",
         "end_time": "14:00"
     },
@@ -198,6 +210,7 @@ const lectures = [
         "onedrive_link": "https://livekentac-my.sharepoint.com/my?referringClient=Sync&id=%2Fpersonal%2Fjd890%5Fkent%5Fac%5Fuk%2FDocuments%2FYear%201%20stuff%2FCOMP3220",
         "moodle_link": "https://moodle.kent.ac.uk/2024/course/view.php?id=877",
         "presto_link": "https://attendance.kent.ac.uk/selfregistration",
+        "maps_link": "https://maps.app.goo.gl/4rHNQZBh3GSamUTb6",
         "start_time": "15:00",
         "end_time": "17:00"
     }
