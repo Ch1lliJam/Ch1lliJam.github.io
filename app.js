@@ -355,6 +355,7 @@ function filterAndDisplayLectures() {
             try {
                 // Adjust the index to start from the correct position
                 const lectureIndex = index - 1;
+
                 if (lectureIndex >= 0 && lectureIndex < upcomingLectures.length) {
                     const lecture = upcomingLectures[lectureIndex];
                     const content = item.querySelector('.content');
@@ -372,7 +373,6 @@ function filterAndDisplayLectures() {
                         <p>${lecture.day}</p>
                         <p>${lecture.start_time} - ${lecture.end_time}</p>
                         <p>${lecture.location}</p>
-                        <p><a href="${lecture.onedrive_link}" target="_blank">OneDrive Link</a> | <a href="${lecture.moodle_link}" target="_blank">Moodle Link</a> | <a href="${lecture.presto_link}" target="_blank">Presto Link</a></p>
                     `;
                     
                     // Set the background image based on the module code
@@ -382,6 +382,32 @@ function filterAndDisplayLectures() {
                     } else {
                         console.warn(`Image URL not found for module code: ${lecture.module_code}`);
                     }
+
+                    // Set the href attributes for the buttons
+                    const onedriveBtn = item.querySelector('.onedrive-btn');
+                    const moodleBtn = item.querySelector('.moodle-btn');
+                    const prestoBtn = item.querySelector('.presto-btn');
+                    const mapBtn = item.querySelector('.map-btn');
+
+                    if (onedriveBtn) onedriveBtn.setAttribute('href', lecture.onedrive_link);
+                    if (moodleBtn) moodleBtn.setAttribute('href', lecture.moodle_link);
+                    if (prestoBtn) prestoBtn.setAttribute('href', lecture.presto_link);
+                    if (mapBtn) mapBtn.setAttribute('href', lecture.maps_link);
+
+                    // Ensure the links open in a new tab
+                    if (onedriveBtn) onedriveBtn.setAttribute('target', '_blank');
+                    if (moodleBtn) moodleBtn.setAttribute('target', '_blank');
+                    if (prestoBtn) prestoBtn.setAttribute('target', '_blank');
+                    if (mapBtn) mapBtn.setAttribute('target', '_blank');
+
+                    // Add fade-in effect
+                    des.classList.add('fade-in');
+                    onedriveBtn.classList.add('fade-in');
+                    moodleBtn.classList.add('fade-in');
+                    prestoBtn.classList.add('fade-in');
+                    mapBtn.classList.add('fade-in');
+
+
                 } else {
                     // Clear the item if there are no more upcoming lectures
                     item.style.backgroundImage = '';
