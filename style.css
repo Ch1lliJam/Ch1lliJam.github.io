@@ -318,7 +318,7 @@ body.WIP-page {
     color: white;
     position: absolute; 
     z-index: 999999 !important;
-    left: 100px;
+    left: 120px;
     opacity: 0;
     animation: animate 1s ease-in-out 0.6s 1 forwards;
 }
@@ -527,7 +527,7 @@ body.WIP-page {
         display: none !important;
     }
     .date-section {
-        left: 50px;
+        left: 70px;
     }
     .WIP-page .item .content {
         left: 50px;
