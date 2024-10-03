@@ -369,7 +369,7 @@ function filterAndDisplayLectures() {
                     
                     name.textContent = lecture.module_name;
                     des.innerHTML = `
-                        <p>${lecture.module_code}</p>
+                        <p><strong>${lecture.module_code}</strong></p>
                         <p>${lecture.day}</p>
                         <p>${lecture.start_time} - ${lecture.end_time}</p>
                         <p>${lecture.location}</p>
@@ -407,7 +407,6 @@ function filterAndDisplayLectures() {
                     prestoBtn.classList.add('fade-in');
                     mapBtn.classList.add('fade-in');
 
-
                 } else {
                     // Clear the item if there are no more upcoming lectures
                     item.style.backgroundImage = '';
@@ -416,11 +415,16 @@ function filterAndDisplayLectures() {
                     const des = content.querySelector('.des');
                     name.textContent = '';
                     des.innerHTML = '';
+
                 }
             } catch (error) {
                 console.error(`Error populating lecture item at index ${index}:`, error);
             }
         });
+
+
+
+
     } catch (error) {
         console.error('Error filtering and displaying lectures:', error);
     }
