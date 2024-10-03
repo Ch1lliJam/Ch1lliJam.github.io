@@ -527,10 +527,12 @@ body.WIP-page {
         display: none !important;
     }
     .date-section {
-        left: 70px;
+        left: 30px;
+        padding-top: 80px; 
+
     }
     .WIP-page .item .content {
-        left: 50px;
+        left: 10px;
     }
     .attribution {
         font-size: 10px;
