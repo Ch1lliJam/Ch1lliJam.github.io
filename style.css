@@ -493,8 +493,10 @@ body.WIP-page {
     display: flex;
     gap: 20px;
     margin-top: 10px;
-    width: 300px;
+    width: 240px;
     padding: 10px 20px;
+    padding-top: 15px;
+    padding-bottom: 15px;
     padding-left: 40px;
     background-color: #007bff;
     color: white;
@@ -528,8 +530,9 @@ body.WIP-page {
     }
     .date-section {
         left: 30px;
-        padding-top: 50px; 
-        margin: 5px 0 !important;
+        padding-top: 10px; 
+        margin: 0px 0 !important;
+        font-size: 10px;
 
     }
     .WIP-page .item .content {
