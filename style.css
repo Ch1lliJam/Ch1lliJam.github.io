@@ -112,7 +112,7 @@ nav a:hover {
 /* Home link alignment */
 nav .home-link {
     margin-right: auto;
-    font-size: 27px; /* Font size for the home link */
+    font-size: 18px; /* Font size for the home link */
     font-weight: bold; /* Make the home link bold */
 }
 
@@ -314,7 +314,7 @@ body.WIP-page {
     align-items: flex-start; /* Align items to the start vertically */
     justify-content: flex-start; /* Align items to the start horizontally */
     height: auto; 
-    padding-top: 30px; 
+    padding-top: 40px; 
     color: white;
     position: absolute; 
     z-index: 999999 !important;
@@ -324,7 +324,7 @@ body.WIP-page {
 }
 
 .date-section h1, .date-section h2 {
-    margin: 5px 0;
+    margin: 0px 0;
     font-size: 1rem;
     color: white;
 }
