@@ -112,7 +112,7 @@ nav a:hover {
 /* Home link alignment */
 nav .home-link {
     margin-right: auto;
-    font-size: 54px; /* Font size for the home link */
+    font-size: 27px; /* Font size for the home link */
     font-weight: bold; /* Make the home link bold */
 }
 
@@ -138,7 +138,7 @@ nav svg {
 
 @media(max-width: 1300px) {
     nav .home-link {
-        font-size: 36px; /* Font size for the home link */
+        font-size: 18px; /* Font size for the home link */
     }
 
 }
@@ -181,7 +181,7 @@ nav svg {
         z-index: 1010;
     }
     nav .home-link {
-        font-size: 36px; /* Font size for the home link */
+        font-size: 18px; /* Font size for the home link */
     }
 }
 
@@ -314,7 +314,7 @@ body.WIP-page {
     align-items: flex-start; /* Align items to the start vertically */
     justify-content: flex-start; /* Align items to the start horizontally */
     height: auto; 
-    padding-top: 160px; 
+    padding-top: 30px; 
     color: white;
     position: absolute; 
     z-index: 999999 !important;
@@ -324,7 +324,7 @@ body.WIP-page {
 }
 
 .date-section h1, .date-section h2 {
-    margin: 10px 0;
+    margin: 5px 0;
     font-size: 1rem;
     color: white;
 }
@@ -493,7 +493,7 @@ body.WIP-page {
     display: flex;
     gap: 20px;
     margin-top: 10px;
-    width: 100px;
+    width: 100%;
     padding: 10px 20px;
     padding-left: 40px;
     background-color: #007bff;
@@ -504,6 +504,7 @@ body.WIP-page {
     text-decoration: none; /* Ensure links don't have underlines */
     align-items: center; /* Center the text vertically */
     justify-content: center; /* Center the text horizontally */
+
 }
 .WIP-page .content a img {
     width: 40px;
@@ -511,7 +512,6 @@ body.WIP-page {
     flex-shrink: 0; /* Prevent the image from shrinking */
     position: absolute; /* Position the image absolutely */
     left: 10px; /* Align the image to the left */
-    
 }
 
 .WIP-page .content a:hover {
