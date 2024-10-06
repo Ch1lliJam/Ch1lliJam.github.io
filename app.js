@@ -275,55 +275,6 @@ function getDayIndex(day) {
 }
 
 
-
-
-// Function to populate lecture items in the HTML
-function populateLectures() {
-    const items = document.querySelectorAll('.item');
-    
-    items.forEach((item, index) => {
-        try {
-            if (index < lectures.length) {
-                const lecture = lectures[index];
-                const content = item.querySelector('.content');
-                if (!content) throw new Error('Content element not found');
-                
-                const name = content.querySelector('.name');
-                if (!name) throw new Error('Name element not found');
-                
-                const des = content.querySelector('.des');
-                if (!des) throw new Error('Description element not found');
-                
-                name.textContent = lecture.module_name;
-                des.innerHTML = `
-                    <p>${lecture.day}</p>
-                    <p>${lecture.start_time} - ${lecture.end_time}</p>
-                    <p>${lecture.location}</p>
-                    <p><a href="${lecture.onedrive_link}">OneDrive Link</a> | <a href="${lecture.moodle_link}">Moodle Link</a></p>
-                `;
-                
-                // Set the background image based on the module code
-                const imageUrl = moduleImages[lecture.module_code];
-                if (imageUrl) {
-                    item.style.backgroundImage = `url(image/${imageUrl})`;
-                } else {
-                    console.warn(`Image URL not found for module code: ${lecture.module_code}`);
-                }
-            } else {
-                // Clear the item if there are no more upcoming lectures
-                item.style.backgroundImage = '';
-                const content = item.querySelector('.content');
-                const name = content.querySelector('.name');
-                const des = content.querySelector('.des');
-                name.textContent = '';
-                des.innerHTML = '';
-            }
-        } catch (error) {
-            console.error(`Error populating lecture item at index ${index}:`, error);
-        }
-    });
-}
-
 function filterAndDisplayLectures() {
     try {
         // Get the current day and time in UK time
@@ -408,14 +359,16 @@ function filterAndDisplayLectures() {
                     mapBtn.classList.add('fade-in');
 
                 } else {
-                    // Clear the item if there are no more upcoming lectures
-                    item.style.backgroundImage = '';
+                    // Set the background image to no_lecture.jpg if there are no more upcoming lectures
+                    item.style.backgroundImage = 'url(image/no_lecture.jpg)';
                     const content = item.querySelector('.content');
                     const name = content.querySelector('.name');
                     const des = content.querySelector('.des');
-                    name.textContent = '';
-                    des.innerHTML = '';
-
+                    name.textContent = 'The City Survives';
+                    des.innerHTML = 'We survived one more week of Whiteouts, but more are forecast from Monday. Good luck Captain.';
+                    // Remove the <a> links
+                    const links = content.querySelectorAll('a');
+                    links.forEach(link => link.remove());
                 }
             } catch (error) {
                 console.error(`Error populating lecture item at index ${index}:`, error);
