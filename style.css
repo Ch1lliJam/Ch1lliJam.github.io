@@ -112,7 +112,7 @@ nav a:hover {
 /* Home link alignment */
 nav .home-link {
     margin-right: auto;
-    font-size: 18px; /* Font size for the home link */
+    font-size: 27px; /* Font size for the home link */
     font-weight: bold; /* Make the home link bold */
 }
 
@@ -136,15 +136,10 @@ nav svg {
     display: none;
 }
 
-@media(max-width: 1300px) {
-    nav .home-link {
-        font-size: 18px; /* Font size for the home link */
-    }
 
-}
 
 /* Responsive styles for smaller screens */
-@media(max-width: 1075px) {
+@media(max-width: 800px) {
     .links-container {
         flex-direction: column;
         align-items: flex-start;
@@ -181,7 +176,7 @@ nav svg {
         z-index: 1010;
     }
     nav .home-link {
-        font-size: 18px; /* Font size for the home link */
+        font-size: 27px; /* Font size for the home link */
     }
 }
 
@@ -490,7 +485,9 @@ body.WIP-page {
     width: 100%;
     text-align: center;
     position: absolute;
-    bottom: 20px;
+    bottom: 20px !important;
+    opacity: 1 !important;
+    z-index: 9999999 !important;
 }
 
 .WIP-page .button button {
@@ -502,6 +499,7 @@ body.WIP-page {
     margin: 0 5px;
     border: 1px solid #000;
     transition: 0.3s;
+    font-size: 16px;
 }
 
 .WIP-page .button button:hover {
