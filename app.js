@@ -96,7 +96,7 @@ const lectures = [
     },
     {
         "module_code": "COMP3200",
-        "module_name": "Drop In Session OOP",
+        "module_name": "Drop In OOP",
         "day": "Monday",
         "location": "Marlowe PC Room 2",
         "onedrive_link": "https://livekentac-my.sharepoint.com/my?referringClient=Sync&id=%2Fpersonal%2Fjd890%5Fkent%5Fac%5Fuk%2FDocuments%2FYear%201%20stuff%2FCOMP3200",
@@ -120,7 +120,7 @@ const lectures = [
     },
     {
         "module_code": "COMP3220",
-        "module_name": "Drop In Session Foundations of Computing I",
+        "module_name": "Drop In Foundations of Computing I",
         "day": "Tuesday",
         "location": "Kennedy Seminar Room 2",
         "onedrive_link": "https://livekentac-my.sharepoint.com/my?referringClient=Sync&id=%2Fpersonal%2Fjd890%5Fkent%5Fac%5Fuk%2FDocuments%2FYear%201%20stuff%2FCOMP3220",
@@ -273,7 +273,6 @@ function getDayIndex(day) {
     const days = ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'];
     return days.indexOf(day);
 }
-
 
 function filterAndDisplayLectures() {
     try {
