@@ -559,7 +559,13 @@ body.WIP-page {
         left: 10px;
     }
     .attribution {
-        font-size: 10px;
+        font-size: 8px;
+        padding: 5px;
+    }
+    .button button {
+        bottom: 30px !important;
+        font-size: 12px !important;
+
     }
 
 }
